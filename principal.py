@@ -6,9 +6,8 @@ import random
 
 def main():
     pygame.init()
-    size = width, height = 300, 300 #Tamaño de la pestañita 
+    size = width, height = 300, 400 #Tamaño de la pestañita 
     screen = pygame.display.set_mode(size)
-    
     images = juego.cargar_imagenes()
     random.shuffle(images)
     
