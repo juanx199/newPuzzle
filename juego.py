@@ -44,8 +44,20 @@ class Juego:
                         # texto = pygame.font.SysFont(None, 48).render(str(self.tablero.tablero[fila][columna]), True, (0, 0, 0))
                         # texto_rect = texto.get_rect(center=(columna*100+50, fila*100+50))
                         # pantalla.blit(texto, texto_rect)
+            if self.tablero.victoria():
+                mensaje_victoria = pygame.font.SysFont(None, 48).render("¡Has ganado!", True, (255, 255, 255))
+                pantalla.blit(mensaje_victoria, (50, 50))  # Muestra el mensaje de victoria en la posición (50, 50)
+                pygame.display.flip()  # Muestra el mensaje de victoria en la pantalla antes de salir del bucle
+                pygame.time.wait(2000)  # Espera 2 segundos antes de salir del juego
+                corriendo = False
+            
             tiempo_letrero = pygame.font.SysFont(None,24).render("Llevas " + str(self.tablero.tiempo()), True,(225,225,225))
             pantalla.blit(tiempo_letrero,(10,10))
+            
+            if self.tablero.victoria():
+                mensaje_victoria = pygame.font.SysFont(Nonee, 48).render("GANASTE",True, (255, 255, 255))
+                pantalla.blit(mensaje_victoria, (60,60))
+                
             pygame.display.flip() # Actualiza 
             reloj.tick(10)
 

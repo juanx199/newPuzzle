@@ -55,3 +55,12 @@ class Tablero:
         tiempo_ahora = time.time() # tiempo actual
         tiempo_total = tiempo_ahora - self.tiempo_inicio
         return round(tiempo_total,2)
+    
+    def victoria(self):
+        for fila in range(self.size):
+            for columna in range(self.size):
+                if fila == self.size -1 and columna == self.size -1:
+                    if self.tablero[fila][columna] != fila * self.size + columna + 1:
+                        return False # Si están en desorden no
+        return True #Si las fichas están en la posición ordenada muestra la victoria      
+        print()  

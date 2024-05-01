@@ -1,11 +1,17 @@
 @startuml
 
 class Juego{
-
+    +
+    +
 }
 
 class Tablero{
-    
+    +
+    +
+    +
+    +
+    +
+    +
 }
 
 
