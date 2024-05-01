@@ -1,18 +1,21 @@
 @startuml
 
 class Juego{
-    +
-    +
+    + cargar_imagenes
+    + iniciar
 }
 
 class Tablero{
-    +
-    +
-    +
-    +
-    +
-    +
+    + generar_tablero
+    + cargar_imagenes
+    + mover_ficha
+    + encontrar_vacio
+    + tiempo
+    + victoria
 }
+
+Juego <|-- Tablero
+
 
 
 @enduml
