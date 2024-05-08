@@ -14,4 +14,4 @@
 
 ## Diagrama del juego
 
-
+[DiagramaUml](out/diagrama/diagrama.png)
